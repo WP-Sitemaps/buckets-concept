@@ -1,0 +1,32 @@
+{
+  "name": "yoast/sitemaps",
+  "description": "Sitemaps",
+  "type": "library",
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "Team Yoast",
+      "email": "development@yoast.com"
+    }
+  ],
+  "require": {
+    "xrstf/composer-php52": "^1.0",
+    "composer/installers": "^1.1"
+  },
+  "autoload": {
+    "classmap": [
+      "classes/"
+    ]
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "xrstf\\Composer52\\Generator::onPostInstallCmd"
+    ],
+    "post-update-cmd": [
+      "xrstf\\Composer52\\Generator::onPostInstallCmd"
+    ],
+    "post-autoload-dump": [
+      "xrstf\\Composer52\\Generator::onPostInstallCmd"
+    ]
+  }
+}
